@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - EventHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>">
+</head>
+<body>
+    <!-- Semantic Header with Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">EventHub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                <li><a href="event-details.html">Event Details</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="hero">
+            <h1>Upcoming Events</h1>
+            <p>Discover amazing events happening near you</p>
+        </section>
+
+        <!-- Content Grid Layout -->
+        <div class="content-grid">
+            <!-- Main Events Section -->
+            <section class="main-content">
+                <!-- Event Schedule Table -->
+                <section>
+                    <h2>Event Schedule Overview</h2>
+                    <table>
+                        <caption style="caption-side: top; padding: 1rem; font-weight: 600; color: var(--primary-color);">Complete Event Timeline - March 2025</caption>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Event</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><time datetime="2025-03-15">March 15, 2025</time></td>
+                                <td>Tech Innovation Summit</td>
+                                <td><time datetime="09:00">9:00 AM</time> - <time datetime="17:00">5:00 PM</time></td>
+                                <td>Pragati Maidan Convention Center</td>
+                                <td><span class="badge" style="background: var(--success);">Open</span></td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2025-03-22">March 22, 2025</time></td>
+                                <td>Spring Music Festival</td>
+                                <td><time datetime="14:00">2:00 PM</time> - <time datetime="23:00">11:00 PM</time></td>
+                                <td>India Gate Amphitheater</td>
+                                <td><span class="badge" style="background: var(--warning);">Limited</span></td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2025-03-28">March 28, 2025</time></td>
+                                <td>Corporate Leadership Workshop</td>
+                                <td><time datetime="10:00">10:00 AM</time> - <time datetime="16:00">4:00 PM</time></td>
+                                <td>Leela Palace New Delhi</td>
+                                <td><span class="badge" style="background: var(--success);">Open</span></td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2025-04-05">April 5, 2025</time></td>
+                                <td>Art & Culture Expo</td>
+                                <td><time datetime="11:00">11:00 AM</time> - <time datetime="19:00">7:00 PM</time></td>
+                                <td>National Gallery of Modern Art</td>
+                                <td><span class="badge" style="background: var(--danger);">Sold Out</span></td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2025-04-12">April 12, 2025</time></td>
+                                <td>Startup Networking Event</td>
+                                <td><time datetime="18:00">6:00 PM</time> - <time datetime="22:00">10:00 PM</time></td>
+                                <td>Cyber Hub Gurgaon</td>
+                                <td><span class="badge" style="background: var(--success);">Open</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Featured Events using Article elements -->
+                <section>
+                    <h2>Featured Events</h2>
+                    <div class="events-grid">
+                        <article class="event-card">
+                            <header>
+                                <h3>Tech Innovation Summit 2025</h3>
+                                <time datetime="2025-03-15" style="color: var(--primary-color); font-weight: 600;">March 15, 2025</time>
+                            </header>
+                            <p>Join industry leaders for a day of cutting-edge technology discussions, product launches, and networking opportunities.</p>
+                            <details>
+                                <summary>Event Details</summary>
+                                <ul>
+                                    <li><strong>Duration:</strong> <time datetime="PT8H">8 hours</time></li>
+                                    <li><strong>Speakers:</strong> 12 industry experts</li>
+                                    <li><strong>Capacity:</strong> 500 attendees</li>
+                                    <li><strong>Price:</strong> ₹12,500 per person</li>
+                                </ul>
+                                <p><strong>Agenda:</strong></p>
+                                <ol>
+                                    <li><time datetime="09:00">9:00 AM</time> - Registration & Breakfast</li>
+                                    <li><time datetime="10:00">10:00 AM</time> - Keynote: Future of AI</li>
+                                    <li><time datetime="11:30">11:30 AM</time> - Panel: Blockchain Innovation</li>
+                                    <li><time datetime="13:00">1:00 PM</time> - Lunch & Networking</li>
+                                    <li><time datetime="14:30">2:30 PM</time> - Workshop: Cloud Computing</li>
+                                    <li><time datetime="16:00">4:00 PM</time> - Closing Remarks</li>
+                                </ol>
+                            </details>
+                            <footer>
+                                <a href="registration.html" class="register-btn" style="display: inline-block; margin-top: 1rem;">Register Now</a>
+                            </footer>
+                        </article>
+
+                        <article class="event-card">
+                            <header>
+                                <h3>Spring Music Festival</h3>
+                                <time datetime="2025-03-22" style="color: var(--primary-color); font-weight: 600;">March 22, 2025</time>
+                            </header>
+                            <p>An outdoor celebration of music featuring local and international artists across multiple genres.</p>
+                            <figure style="margin: 1rem 0;">
+                                <div style="background: linear-gradient(45deg, #f97316, #eab308); height: 150px; border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">🎵 🎸 🎤</div>
+                                <figcaption style="text-align: center; margin-top: 0.5rem; color: var(--text-light); font-style: italic;">Multiple stages featuring diverse musical performances</figcaption>
+                            </figure>
+                            <details>
+                                <summary>Festival Lineup</summary>
+                                <h4>Main Stage</h4>
+                                <ul>
+                                    <li><time datetime="14:00">2:00 PM</time> - The Electric Waves</li>
+                                    <li><time datetime="16:00">4:00 PM</time> - Delhi Jazz Collective</li>
+                                    <li><time datetime="18:30">6:30 PM</time> - Indie Rock Revolution</li>
+                                    <li><time datetime="21:00">9:00 PM</time> - Headliner: Symphony Orchestra</li>
+                                </ul>
+                                <h4>Acoustic Stage</h4>
+                                <ul>
+                                    <li><time datetime="15:00">3:00 PM</time> - Folk Stories Duo</li>
+                                    <li><time datetime="17:00">5:00 PM</time> - Singer-Songwriter Sessions</li>
+                                    <li><time datetime="19:00">7:00 PM</time> - Classical Guitar Ensemble</li>
+                                </ul>
+                            </details>
+                            <footer>
+                                <a href="registration.html" class="register-btn" style="display: inline-block; margin-top: 1rem;">Get Tickets</a>
+                            </footer>
+                        </article>
+
+                        <article class="event-card">
+                            <header>
+                                <h3>Corporate Leadership Workshop</h3>
+                                <time datetime="2025-03-28" style="color: var(--primary-color); font-weight: 600;">March 28, 2025</time>
+                            </header>
+                            <p>Develop essential leadership skills through interactive workshops, case studies, and peer collaboration.</p>
+                            <p>This intensive workshop covers:</p>
+                            <ul>
+                                <li>Strategic thinking and decision making</li>
+                                <li>Team building and communication</li>
+                                <li>Change management strategies</li>
+                                <li>Performance optimization techniques</li>
+                            </ul>
+                            <div style="margin: 1rem 0;">
+                                <label for="leadership-progress">Workshop Completion Rate:</label>
+                                <progress id="leadership-progress" value="92" max="100">92%</progress>
+                                <span style="color: var(--success); font-weight: 600;">92% satisfaction rate</span>
+                            </div>
+                            <footer>
+                                <a href="registration.html" class="register-btn" style="display: inline-block; margin-top: 1rem;">Enroll Today</a>
+                            </footer>
+                        </article>
+
+                        <article class="event-card">
+                            <header>
+                                <h3>Art & Culture Expo</h3>
+                                <time datetime="2025-04-05" style="color: var(--primary-color); font-weight: 600;">April 5, 2025</time>
+                            </header>
+                            <p>Immerse yourself in contemporary art, cultural exhibitions, and interactive installations from renowned artists worldwide.</p>
+                            <blockquote style="border-left: 4px solid var(--accent-color); padding-left: 1rem; margin: 1rem 0; font-style: italic; background: rgba(139, 92, 246, 0.1); padding: 1rem; border-radius: 0 8px 8px 0;">
+                                "Art is not what you see, but what you make others see."
+                                <cite style="display: block; margin-top: 0.5rem; font-weight: 600; color: var(--accent-color);">- Edgar Degas</cite>
+                            </blockquote>
+                            <p><mark style="background: var(--warning); color: var(--white); padding: 0.2rem 0.5rem; border-radius: 4px;">SOLD OUT</mark> - Join our waitlist!</p>
+                            <footer>
+                                <a href="registration.html" class="register-btn" style="display: inline-block; margin-top: 1rem; background: var(--text-light);">Join Waitlist</a>
+                            </footer>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Event Categories -->
+                <section>
+                    <h2>Browse by Category</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
+                        <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow); text-align: center;">
+                            <h3 style="color: var(--primary-color);">🏢 Corporate</h3>
+                            <p>Professional development, conferences, and business networking events.</p>
+                            <p><strong>12 upcoming events</strong></p>
+                        </div>
+                        <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow); text-align: center;">
+                            <h3 style="color: var(--secondary-color);">🎭 Cultural</h3>
+                            <p>Art exhibitions, music festivals, and cultural celebrations.</p>
+                            <p><strong>8 upcoming events</strong></p>
+                        </div>
+                        <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow); text-align: center;">
+                            <h3 style="color: var(--accent-color);">🎓 Educational</h3>
+                            <p>Workshops, seminars, and skill development programs.</p>
+                            <p><strong>15 upcoming events</strong></p>
+                        </div>
+                        <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow); text-align: center;">
+                            <h3 style="color: var(--success);">🎉 Social</h3>
+                            <p>Community gatherings, celebrations, and networking mixers.</p>
+                            <p><strong>6 upcoming events</strong></p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <h3>Event Calendar</h3>
+                <div style="background: var(--light-bg); padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1.5rem;">
+                    <p><strong>Current Month:</strong> March 2025</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.25rem 0;">📅 <time datetime="2025-03-15">March 15</time> - Tech Summit</li>
+                        <li style="padding: 0.25rem 0;">🎵 <time datetime="2025-03-22">March 22</time> - Music Festival</li>
+                        <li style="padding: 0.25rem 0;">👔 <time datetime="2025-03-28">March 28</time> - Leadership Workshop</li>
+                    </ul>
+                </div>
+
+                <h3>Quick Filters</h3>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <button style="background: var(--light-bg); color: var(--text-dark); border: 1px solid var(--primary-color);">This Week</button>
+                    <button style="background: var(--light-bg); color: var(--text-dark); border: 1px solid var(--primary-color);">This Month</button>
+                    <button style="background: var(--light-bg); color: var(--text-dark); border: 1px solid var(--primary-color);">Free Events</button>
+                    <button style="background: var(--light-bg); color: var(--text-dark); border: 1px solid var(--primary-color);">Near Me</button>
+                </div>
+
+                <h3>Event Statistics</h3>
+                <div style="margin: 1rem 0;">
+                    <p><strong>Total Events:</strong> 41</p>
+                    <meter value="41" min="0" max="50" style="width: 100%; height: 1.5rem;">41 out of 50</meter>
+                    
+                    <p style="margin-top: 1rem;"><strong>Capacity Filled:</strong></p>
+                    <progress value="75" max="100" style="width: 100%; height: 1.5rem;">75%</progress>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">75% of total capacity</p>
+                </div>
+
+                <h3>Newsletter Signup</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Get notified about new events and exclusive offers!</p>
+                <form style="background: none; padding: 0; box-shadow: none;">
+                    <input type="email" placeholder="Enter your email" required style="margin-bottom: 0.5rem;">
+                    <button type="submit" style="width: 100%;">Subscribe</button>
+                </form>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p>&copy; 2025 EventHub. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.8);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.8);">Terms of Service</a></p>
+            <p><small>Creating unforgettable experiences since 2020</small></p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

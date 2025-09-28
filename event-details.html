@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovation Summit 2025 - EventHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>">
+    
+    <!-- Internal CSS for event details specific styling -->
+    <style>
+        .event-header {
+            background: linear-gradient(135deg, #1e3a8a, #3730a3);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+        
+        .event-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .meta-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .speaker-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .speaker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .speaker-image {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--white);
+        }
+        
+        .speaker-info {
+            padding: 1.5rem;
+        }
+        
+        .agenda-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .agenda-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+        }
+        
+        .agenda-item {
+            position: relative;
+            background: var(--white);
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-left: 1rem;
+        }
+        
+        .agenda-item::before {
+            content: '';
+            position: absolute;
+            left: -1.75rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+        }
+        
+        .pricing-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--secondary-color);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Semantic Header with Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">EventHub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                <li><a href="event-details.html">Event Details</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Event Header -->
+        <header class="event-header">
+            <h1>Tech Innovation Summit 2025</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">Shaping the Future of Technology</p>
+            <time datetime="2025-03-15" style="font-size: 1.1rem; font-weight: 600; background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 25px;">📅 March 15, 2025</time>
+        </header>
+
+        <!-- Content Grid Layout -->
+        <div class="content-grid">
+            <!-- Main Event Content -->
+            <section class="main-content">
+                <!-- Event Overview -->
+                <article>
+                    <h2>Event Overview</h2>
+                    <p>Join us for the most anticipated technology event of the year! The <strong style="color: var(--primary-color);">Tech Innovation Summit 2025</strong> brings together industry leaders, innovators, and technology enthusiasts for a day of groundbreaking presentations, interactive workshops, and unparalleled networking opportunities.</p>
+                    
+                    <blockquote style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem; margin: 2rem 0; font-size: 1.1rem; font-style: italic; background: rgba(37, 99, 235, 0.05); padding: 1.5rem; border-radius: 0 8px 8px 0;">
+                        "Innovation distinguishes between a leader and a follower. This summit will showcase the technologies that will define our future."
+                        <cite style="display: block; margin-top: 1rem; font-weight: 600; color: var(--primary-color); font-style: normal;">- Dr. Sarah Chen, Event Director</cite>
+                    </blockquote>
+                    
+                    <p>This year's theme focuses on <mark style="background: linear-gradient(45deg, #fbbf24, #f59e0b); color: var(--white); padding: 0.3rem 0.6rem; border-radius: 4px; font-weight: 600;">Artificial Intelligence</mark>, <em style="color: var(--accent-color); font-weight: 600;">Sustainable Technology</em>, and the <abbr title="Internet of Things" style="text-decoration: underline; color: var(--primary-color);">IoT</abbr> revolution.</p>
+                </article>
+
+                <!-- Event Meta Information -->
+                <section class="event-meta">
+                    <div class="meta-item">
+                        <h3>📍 Venue</h3>
+                        <p><strong>Pragati Maidan Convention Center</strong></p>
+                        <address style="font-style: normal;">
+                            Hall No. 12A, Pragati Maidan<br>
+                            New Delhi, Delhi 110001
+                        </address>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <h3>⏰ Duration</h3>
+                        <p><time datetime="PT8H">8 Hours</time></p>
+                        <p><time datetime="09:00">9:00 AM</time> - <time datetime="17:00">5:00 PM</time></p>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <h3>👥 Capacity</h3>
+                        <p><strong>500 Attendees</strong></p>
+                        <progress value="320" max="500" style="width: 100%; height: 1.5rem;">320 registered</progress>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">320 registered</p>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <h3>🎯 Target Audience</h3>
+                        <ul style="text-align: left; list-style: none; padding: 0;">
+                            <li>✓ Technology Professionals</li>
+                            <li>✓ Startup Founders</li>
+                            <li>✓ Innovation Leaders</li>
+                            <li>✓ Students & Researchers</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Event Agenda -->
+                <section>
+                    <h2>Detailed Agenda</h2>
+                    <div class="agenda-timeline">
+                        <article class="agenda-item">
+                            <h3><time datetime="09:00">9:00 AM</time> - Registration & Welcome</h3>
+                            <p>Check-in, welcome breakfast, and networking session. Receive your conference materials and connect with fellow attendees.</p>
+                            <ul>
+                                <li>Name badge pickup</li>
+                                <li>Welcome breakfast buffet</li>
+                                <li>Early networking opportunities</li>
+                                <li>Conference swag distribution</li>
+                            </ul>
+                        </article>
+                        
+                        <article class="agenda-item">
+                            <h3><time datetime="10:00">10:00 AM</time> - Opening Keynote</h3>
+                            <h4>"The Future of Artificial Intelligence"</h4>
+                            <p><strong>Speaker:</strong> Dr. Rajesh Sharma, Chief AI Officer at TechVision India</p>
+                            <p>Explore the transformative potential of AI across industries and its implications for the future workforce.</p>
+                        </article>
+                        
+                        <article class="agenda-item">
+                            <h3><time datetime="11:30">11:30 AM</time> - Panel Discussion</h3>
+                            <h4>"Blockchain Revolution: Beyond Cryptocurrency"</h4>
+                            <p>Industry experts discuss practical applications of blockchain technology in finance, healthcare, and supply chain management.</p>
+                            <details style="margin-top: 1rem;">
+                                <summary>Panel Participants</summary>
+                                <ul>
+                                    <li>Kavya Patel - Blockchain Architect</li>
+                                    <li>James Kim - FinTech Innovator</li>
+                                    <li>Dr. Priya Patel - Healthcare Technology</li>
+                                    <li>Rohit Gupta - Supply Chain Expert</li>
+                                </ul>
+                            </details>
+                        </article>
+                        
+                        <article class="agenda-item">
+                            <h3><time datetime="13:00">1:00 PM</time> - Lunch & Networking</h3>
+                            <p>Enjoy a gourmet lunch while connecting with speakers, sponsors, and fellow participants in our dedicated networking area.</p>
+                        </article>
+                        
+                        <article class="agenda-item">
+                            <h3><time datetime="14:30">2:30 PM</time> - Interactive Workshop</h3>
+                            <h4>"Hands-on Cloud Computing with AWS"</h4>
+                            <p>Practical workshop where participants will build and deploy a cloud application using modern DevOps practices.</p>
+                            <p><strong>Requirements:</strong> Laptop required, AWS account recommended</p>
+                        </article>
+                        
+                        <article class="agenda-item">
+                            <h3><time datetime="16:00">4:00 PM</time> - Innovation Showcase</h3>
+                            <h4>"Startup Pitch Competition"</h4>
+                            <p>Watch emerging startups present their innovative solutions to a panel of investors and industry leaders.</p>
+                            <meter value="8" max="10" style="width: 100%; height: 1.5rem;">8 participating startups</meter>
+                            <p style="font-size: 0.9rem; color: var(--text-light);">8 startups competing</p>
+                        </article>
+                        
+                        <article class="agenda-item">
+                            <h3><time datetime="16:45">4:45 PM</time> - Closing Ceremony</h3>
+                            <p>Awards presentation, closing remarks, and information about next year's summit.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Featured Speakers -->
+                <section>
+                    <h2>Featured Speakers</h2>
+                    <div class="speakers-grid">
+                        <article class="speaker-card">
+                            <div class="speaker-image">👨‍💼</div>
+                            <div class="speaker-info">
+                                <h3>Dr. Rajesh Sharma</h3>
+                                <p style="color: var(--primary-color); font-weight: 600;">Chief AI Officer, TechVision India</p>
+                                <p>Leading AI researcher with 15+ years of experience in machine learning and neural networks. Author of "The AI Revolution" and keynote speaker at major tech conferences worldwide.</p>
+                                <details>
+                                    <summary>Biography & Achievements</summary>
+                                    <ul>
+                                        <li>PhD in Computer Science, MIT</li>
+                                        <li>Former Google AI Research Team Lead</li>
+                                        <li>Published 50+ peer-reviewed papers</li>
+                                        <li>Named in Forbes 30 Under 30 Tech Leaders</li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </article>
+                        
+                        <article class="speaker-card">
+                            <div class="speaker-image">👩‍💻</div>
+                            <div class="speaker-info">
+                                <h3>Kavya Patel</h3>
+                                <p style="color: var(--primary-color); font-weight: 600;">Blockchain Architect, BlockChain India</p>
+                                <p>Pioneering blockchain developer and consultant specializing in enterprise blockchain solutions and smart contract development.</p>
+                                <details>
+                                    <summary>Biography & Achievements</summary>
+                                    <ul>
+                                        <li>MS in Cryptography, Stanford University</li>
+                                        <li>Lead developer on 20+ blockchain projects</li>
+                                        <li>Ethereum Foundation grant recipient</li>
+                                        <li>Regular contributor to blockchain standards</li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </article>
+                        
+                        <article class="speaker-card">
+                            <div class="speaker-image">👨‍🔬</div>
+                            <div class="speaker-info">
+                                <h3>Dr. Aman Singh</h3>
+                                <p style="color: var(--primary-color); font-weight: 600;">FinTech Innovation Director, FinTech India</p>
+                                <p>Expert in financial technology innovation, digital payments, and regulatory compliance in the fintech space.</p>
+                                <details>
+                                    <summary>Biography & Achievements</summary>
+                                    <ul>
+                                        <li>MBA Finance, Wharton School</li>
+                                        <li>Former VP at JPMorgan Chase Innovation Lab</li>
+                                        <li>Advisor to 15+ fintech startups</li>
+                                        <li>Featured in Wall Street Journal Tech section</li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Pricing Information -->
+                <section>
+                    <h2>Ticket Pricing</h2>
+                    <div class="pricing-tiers">
+                        <div class="pricing-card">
+                            <h3>Early Bird</h3>
+                            <div class="price">₹8,250</div>
+                            <p style="color: var(--danger); font-weight: 600;">SOLD OUT</p>
+                            <ul style="text-align: left; list-style: none; padding: 0;">
+                                <li>✓ Full conference access</li>
+                                <li>✓ Welcome breakfast</li>
+                                <li>✓ Lunch included</li>
+                                <li>✓ Conference materials</li>
+                                <li>✗ VIP networking</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="pricing-card featured">
+                            <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--secondary-color); color: var(--white); padding: 0.5rem 1rem; border-radius: 15px; font-weight: 600; font-size: 0.9rem;">POPULAR</div>
+                            <h3>Standard</h3>
+                            <div class="price">₹12,500</div>
+                            <p style="color: var(--success); font-weight: 600;">Available</p>
+                            <ul style="text-align: left; list-style: none; padding: 0;">
+                                <li>✓ Full conference access</li>
+                                <li>✓ Welcome breakfast</li>
+                                <li>✓ Lunch included</li>
+                                <li>✓ Conference materials</li>
+                                <li>✓ Digital resources</li>
+                                <li>✗ VIP networking</li>
+                            </ul>
+                            <a href="registration.html" class="register-btn" style="margin-top: 1rem;">Register Now</a>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <h3>VIP</h3>
+                            <div class="price">₹24,900</div>
+                            <p style="color: var(--warning); font-weight: 600;">Limited</p>
+                            <ul style="text-align: left; list-style: none; padding: 0;">
+                                <li>✓ Full conference access</li>
+                                <li>✓ Premium seating</li>
+                                <li>✓ VIP networking reception</li>
+                                <li>✓ One-on-one speaker meetings</li>
+                                <li>✓ Exclusive workshop access</li>
+                                <li>✓ Premium swag bag</li>
+                            </ul>
+                            <a href="registration.html" class="register-btn" style="margin-top: 1rem; background: var(--accent-color);">Get VIP Access</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media Section -->
+                <section>
+                    <h2>Event Promotion</h2>
+                    <figure style="margin: 2rem 0;">
+                        <audio controls style="width: 100%; margin-bottom: 1rem;">
+                            <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBDeD0vPUfSsFJnXA7N2UPwgRXLLk6qpWFAhBne7+2JRQHYzLp2iSaFGhKKiPtZOVSZKgdGOTZUahHqCKr5WUTJWjfWaVZkmhJqKStZSWRZKceVyYa06iLaCNsZOWS5ShcGCQYkWgI6CQr5KQTpStdmCVZkyiLKONvJaWSpicdFyYaE6kLqONvJaWSpicdFyYaE6kLqONvJaWSpicdFyYaE6kLqONvJaWS5KgcGCQYkWgI6CQr5KQTpStdmCVZkyiLKON" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <figcaption>Conference promotion audio - featuring highlights from previous summits</figcaption>
+                    </figure>
+                    
+                    <figure style="margin: 2rem 0;">
+                        <video controls style="width: 100%; border-radius: var(--border-radius);">
+                            <source src="data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAABW5tZGF0AAEABGOehlUBAAkAMkAAGqR1Q9s3ywAAP//+BFJsB/q4R1Sf8YsAAAAAAAcgQBEIAAKhRhKHChHBwgb9JQaAAAB/hUhJBogF6QZrEAAAAAAAEAAAAAAAAAAAEAIDAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAD3AgMAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAE=" type="video/mp4">
+                            Your browser does not support the video element.
+                        </video>
+                        <figcaption>Tech Innovation Summit 2024 highlights - see what made last year's event special</figcaption>
+                    </figure>
+                </section>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <h3>Quick Registration</h3>
+                <div style="background: var(--light-bg); padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1.5rem;">
+                    <p style="font-weight: 600; color: var(--primary-color);">Secure your spot today!</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Only <strong>180 spots</strong> remaining</p>
+                    <progress value="320" max="500" style="width: 100%; height: 1.5rem; margin-bottom: 1rem;">64% full</progress>
+                    <a href="registration.html" class="register-btn" style="display: block; text-align: center;">Register Now</a>
+                </div>
+
+                <h3>Event Information</h3>
+                <dl style="line-height: 1.8;">
+                    <dt style="font-weight: 600; color: var(--text-dark);">Date:</dt>
+                    <dd style="margin-bottom: 0.5rem;"><time datetime="2025-03-15">March 15, 2025</time></dd>
+                    
+                    <dt style="font-weight: 600; color: var(--text-dark);">Time:</dt>
+                    <dd style="margin-bottom: 0.5rem;"><time datetime="09:00">9:00 AM</time> - <time datetime="17:00">5:00 PM</time></dd>
+                    
+                    <dt style="font-weight: 600; color: var(--text-dark);">Duration:</dt>
+                    <dd style="margin-bottom: 0.5rem;"><time datetime="PT8H">8 hours</time></dd>
+                    
+                    <dt style="font-weight: 600; color: var(--text-dark);">Language:</dt>
+                    <dd style="margin-bottom: 0.5rem;">English</dd>
+                    
+                    <dt style="font-weight: 600; color: var(--text-dark);">Dress Code:</dt>
+                    <dd style="margin-bottom: 0.5rem;">Business Casual</dd>
+                </dl>
+
+                <h3>What's Included</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                    <li style="color: var(--success);">✓ Full conference access</li>
+                    <li style="color: var(--success);">✓ Welcome breakfast</li>
+                    <li style="color: var(--success);">✓ Networking lunch</li>
+                    <li style="color: var(--success);">✓ Digital resources</li>
+                    <li style="color: var(--success);">✓ Certificate of attendance</li>
+                    <li style="color: var(--success);">✓ Conference swag bag</li>
+                </ul>
+
+                <h3>Share This Event</h3>
+                <div style="display: flex; gap: 1rem; margin: 1rem 0;">
+                    <a href="#" style="color: var(--primary-color); font-size: 1.5rem; text-decoration: none;" title="Share on Facebook">📘</a>
+                    <a href="#" style="color: var(--primary-color); font-size: 1.5rem; text-decoration: none;" title="Share on Twitter">🐦</a>
+                    <a href="#" style="color: var(--primary-color); font-size: 1.5rem; text-decoration: none;" title="Share on LinkedIn">💼</a>
+                    <a href="#" style="color: var(--primary-color); font-size: 1.5rem; text-decoration: none;" title="Copy Link">🔗</a>
+                </div>
+
+                <h3>Contact Support</h3>
+                <p style="font-size: 0.9rem;">Need help? Contact our event team:</p>
+                <p style="font-size: 0.9rem;">
+                    📧 <a href="mailto:niteshphalaswal1234@gmail.com" style="color: var(--primary-color);">niteshphalaswal1234@gmail.com</a><br>
+                    📞 <a href="tel:+918750719551" style="color: var(--primary-color);">+91 8750719551</a>
+                </p>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p>&copy; 2025 EventHub. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.8);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.8);">Terms of Service</a></p>
+            <p><small>Creating unforgettable experiences since 2020</small></p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

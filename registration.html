@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - EventHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>">
+</head>
+<body>
+    <!-- Semantic Header with Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">EventHub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                <li><a href="event-details.html">Event Details</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="hero">
+            <h1>Event Registration</h1>
+            <p>Join us for an unforgettable experience</p>
+        </section>
+
+        <!-- Content Grid Layout -->
+        <div class="content-grid">
+            <!-- Main Registration Forms -->
+            <section class="main-content">
+                <!-- Event Registration Form -->
+                <form>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        
+                        <label for="firstName">First Name <span style="color: var(--danger);">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required 
+                               pattern="[A-Za-z]{2,50}" 
+                               title="First name should contain only letters (2-50 characters)"
+                               placeholder="Enter your first name">
+                        
+                        <label for="lastName">Last Name <span style="color: var(--danger);">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required 
+                               pattern="[A-Za-z]{2,50}" 
+                               title="Last name should contain only letters (2-50 characters)"
+                               placeholder="Enter your last name">
+                        
+                        <label for="email">Email Address <span style="color: var(--danger);">*</span></label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="your.email@example.com"
+                               title="Please enter a valid email address">
+                        
+                        <label for="phone">Phone Number <span style="color: var(--danger);">*</span></label>
+                        <input type="tel" id="phone" name="phone" required 
+                               pattern="[0-9\-\+\(\)\s]+" 
+                               placeholder="+1 (555) 123-4567"
+                               title="Please enter a valid phone number">
+                        
+                        <label for="company">Company/Organization</label>
+                        <input type="text" id="company" name="company" 
+                               placeholder="Your company name (optional)">
+                        
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" id="jobTitle" name="jobTitle" 
+                               placeholder="Your job title (optional)">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Event Selection</legend>
+                        
+                        <label for="eventChoice">Choose Your Event <span style="color: var(--danger);">*</span></label>
+                        <select id="eventChoice" name="eventChoice" required>
+                            <option value="">-- Select an Event --</option>
+                            <option value="tech-summit">Tech Innovation Summit 2025</option>
+                            <option value="music-festival">Spring Music Festival</option>
+                            <option value="leadership-workshop">Corporate Leadership Workshop</option>
+                            <option value="art-expo">Art & Culture Expo</option>
+                            <option value="startup-networking">Startup Networking Event</option>
+                        </select>
+                        
+                        <label for="ticketType">Ticket Type <span style="color: var(--danger);">*</span></label>
+                        <select id="ticketType" name="ticketType" required>
+                            <option value="">-- Select Ticket Type --</option>
+                            <option value="standard">Standard - ₹12,500</option>
+                            <option value="vip">VIP - ₹24,900</option>
+                            <option value="student">Student (with ID) - ₹6,250</option>
+                            <option value="group">Group (5+) - ₹10,000 each</option>
+                        </select>
+                        
+                        <label for="attendeeCount">Number of Attendees <span style="color: var(--danger);">*</span></label>
+                        <input type="number" id="attendeeCount" name="attendeeCount" 
+                               min="1" max="10" value="1" required
+                               title="Select between 1 and 10 attendees">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dietary Requirements & Accessibility</legend>
+                        
+                        <label for="dietaryReqs">Dietary Requirements</label>
+                        <select id="dietaryReqs" name="dietaryReqs">
+                            <option value="none">No special requirements</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="gluten-free">Gluten-Free</option>
+                            <option value="halal">Halal</option>
+                            <option value="kosher">Kosher</option>
+                            <option value="other">Other (please specify below)</option>
+                        </select>
+                        
+                        <label for="accessibility">Accessibility Requirements</label>
+                        <textarea id="accessibility" name="accessibility" rows="3" 
+                                  placeholder="Please describe any accessibility requirements (wheelchair access, hearing assistance, etc.)"></textarea>
+                        
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea id="specialRequests" name="specialRequests" rows="3" 
+                                  placeholder="Any additional requests or comments"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Workshop Preferences</legend>
+                        
+                        <p style="margin-bottom: 1rem;"><strong>Select your preferred workshops:</strong></p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 0.5rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" name="workshops" value="ai-fundamentals">
+                                AI Fundamentals Workshop
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" name="workshops" value="blockchain-basics">
+                                Blockchain Basics
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" name="workshops" value="cloud-computing">
+                                Cloud Computing Hands-on
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" name="workshops" value="data-science">
+                                Data Science with Python
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" name="workshops" value="cybersecurity">
+                                Cybersecurity Essentials
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Experience Level & Interests</legend>
+                        
+                        <label for="experience">Your Experience Level <span style="color: var(--danger);">*</span></label>
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 1rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="experience" value="beginner" required>
+                                Beginner (0-2 years experience)
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="experience" value="intermediate" required>
+                                Intermediate (2-5 years experience)
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="experience" value="advanced" required>
+                                Advanced (5+ years experience)
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="experience" value="expert" required>
+                                Expert/Industry Leader
+                            </label>
+                        </div>
+                        
+                        <label for="interests">Primary Areas of Interest</label>
+                        <textarea id="interests" name="interests" rows="3" 
+                                  placeholder="What topics are you most interested in learning about?"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Marketing Preferences</legend>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                Subscribe to our newsletter for future event updates
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" name="sms" value="yes">
+                                Receive SMS notifications about this event
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" name="sharing" value="yes">
+                                Allow EventHub to share my contact with event sponsors
+                            </label>
+                        </div>
+                        
+                        <label for="referral">How did you hear about us?</label>
+                        <select id="referral" name="referral">
+                            <option value="">-- Please select --</option>
+                            <option value="google">Google Search</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="friend">Friend/Colleague</option>
+                            <option value="newsletter">Email Newsletter</option>
+                            <option value="advertisement">Advertisement</option>
+                            <option value="website">Our Website</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Terms and Conditions</legend>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                <input type="checkbox" name="terms" value="accepted" required 
+                                       style="margin-top: 0.2rem;">
+                                <span>I agree to the <a href="#" style="color: var(--primary-color);">Terms and Conditions</a> and <a href="#" style="color: var(--primary-color);">Privacy Policy</a> <span style="color: var(--danger);">*</span></span>
+                            </label>
+                            
+                            <label style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                <input type="checkbox" name="cancellation" value="understood" required 
+                                       style="margin-top: 0.2rem;">
+                                <span>I understand the <a href="#" style="color: var(--primary-color);">cancellation policy</a> <span style="color: var(--danger);">*</span></span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <button type="submit" class="register-btn" style="font-size: 1.2rem; padding: 1rem 3rem;">
+                            Complete Registration
+                        </button>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                            You will receive a confirmation email after registration
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Contact Form Section -->
+                <section style="margin-top: 3rem;">
+                    <h2>Contact Us</h2>
+                    <p>Have questions about registration or the event? Get in touch with our team!</p>
+                    
+                    <form style="background: var(--light-bg); border: 2px solid var(--primary-color);">
+                        <fieldset>
+                            <legend>Contact Information</legend>
+                            
+                            <label for="contactName">Your Name <span style="color: var(--danger);">*</span></label>
+                            <input type="text" id="contactName" name="contactName" required 
+                                   placeholder="Enter your full name">
+                            
+                            <label for="contactEmail">Email Address <span style="color: var(--danger);">*</span></label>
+                            <input type="email" id="contactEmail" name="contactEmail" required 
+                                   placeholder="your.email@example.com">
+                            
+                            <label for="contactSubject">Subject <span style="color: var(--danger);">*</span></label>
+                            <select id="contactSubject" name="contactSubject" required>
+                                <option value="">-- Select a Topic --</option>
+                                <option value="registration">Registration Questions</option>
+                                <option value="pricing">Pricing & Discounts</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="accessibility">Accessibility Requirements</option>
+                                <option value="group">Group Registration</option>
+                                <option value="sponsorship">Sponsorship Opportunities</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                            
+                            <label for="priority">Priority Level</label>
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; margin-bottom: 1rem;">
+                                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <input type="radio" name="priority" value="low" checked>
+                                    Low - General inquiry
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <input type="radio" name="priority" value="medium">
+                                    Medium - Registration assistance needed
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <input type="radio" name="priority" value="high">
+                                    High - Urgent matter
+                                </label>
+                            </div>
+                            
+                            <label for="contactMessage">Message <span style="color: var(--danger);">*</span></label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required 
+                                      placeholder="Please describe your question or concern in detail..."
+                                      minlength="10" maxlength="1000"></textarea>
+                            
+                            <div style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">
+                                Character count: <span id="charCount">0</span>/1000
+                            </div>
+                        </fieldset>
+
+                        <div style="text-align: center;">
+                            <button type="submit" style="background: var(--secondary-color);">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Interactive Elements Section -->
+                <section style="margin-top: 3rem;">
+                    <h2>Registration Progress & Information</h2>
+                    
+                    <details style="margin: 1rem 0;">
+                        <summary>Payment Information</summary>
+                        <div style="padding: 1rem;">
+                            <p><strong>Accepted Payment Methods:</strong></p>
+                            <ul>
+                                <li>Credit Cards (Visa, MasterCard, American Express)</li>
+                                <li>PayPal</li>
+                                <li>Bank Transfer (for group registrations)</li>
+                                <li>Company Purchase Orders</li>
+                            </ul>
+                            
+                            <p><strong>Payment Schedule:</strong></p>
+                            <ul>
+                                <li>Individual registrations: Full payment due at registration</li>
+                                <li>Group registrations (5+): 50% deposit, balance due 2 weeks before event</li>
+                                <li>Corporate bookings: Net 30 payment terms available</li>
+                            </ul>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>Refund & Cancellation Policy</summary>
+                        <div style="padding: 1rem;">
+                            <p><strong>Cancellation Timeline:</strong></p>
+                            <ul>
+                                <li>More than 30 days before event: <strong>Full refund</strong></li>
+                                <li>15-30 days before event: <strong>75% refund</strong></li>
+                                <li>7-14 days before event: <strong>50% refund</strong></li>
+                                <li>Less than 7 days: <strong>No refund</strong> (credit for future events)</li>
+                            </ul>
+                            
+                            <p><strong>Transfer Policy:</strong></p>
+                            <p>Event transfers to another person are allowed up to 3 days before the event at no additional cost.</p>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>Event Capacity & Registration Status</summary>
+                        <div style="padding: 1rem;">
+                            <h4>Current Registration Status:</h4>
+                            <div style="margin: 1rem 0;">
+                                <p><strong>Tech Innovation Summit:</strong></p>
+                                <progress value="320" max="500">320 of 500</progress>
+                                <p style="font-size: 0.9rem; color: var(--text-light);">320 registered / 500 capacity (64% full)</p>
+                            </div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p><strong>Spring Music Festival:</strong></p>
+                                <progress value="1200" max="1500">1200 of 1500</progress>
+                                <p style="font-size: 0.9rem; color: var(--text-light);">1,200 registered / 1,500 capacity (80% full)</p>
+                            </div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p><strong>Corporate Leadership Workshop:</strong></p>
+                                <meter value="45" max="50">45 of 50</meter>
+                                <p style="font-size: 0.9rem; color: var(--text-light);">45 registered / 50 capacity (90% full)</p>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>COVID-19 Safety Measures</summary>
+                        <div style="padding: 1rem;">
+                            <p>Your health and safety are our top priorities. We have implemented the following measures:</p>
+                            <ul>
+                                <li>Enhanced cleaning and sanitization protocols</li>
+                                <li>Hand sanitizing stations throughout the venue</li>
+                                <li>Flexible cancellation policy for health-related issues</li>
+                                <li>Option to attend virtually for select sessions</li>
+                                <li>Contactless registration and payment options</li>
+                            </ul>
+                            
+                            <p><mark style="background: var(--warning); color: var(--white); padding: 0.3rem 0.6rem; border-radius: 4px;">Please stay home if you feel unwell</mark></p>
+                        </div>
+                    </details>
+                </section>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <h3>Registration Summary</h3>
+                <div style="background: var(--light-bg); padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1.5rem;">
+                    <p><strong>Quick Registration Steps:</strong></p>
+                    <ol style="line-height: 1.8; padding-left: 1.5rem;">
+                        <li>Fill out personal information</li>
+                        <li>Select your event and ticket type</li>
+                        <li>Choose workshops and preferences</li>
+                        <li>Review and submit</li>
+                        <li>Complete payment</li>
+                        <li>Receive confirmation email</li>
+                    </ol>
+                </div>
+
+                <h3>Popular Events</h3>
+                <div style="background: var(--white); padding: 1.5rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin-bottom: 1.5rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Tech Innovation Summit</h4>
+                        <p style="font-size: 0.9rem;">Most popular choice</p>
+                        <progress value="320" max="500" style="width: 100%; height: 1rem;">64%</progress>
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Music Festival</h4>
+                        <p style="font-size: 0.9rem;">Filling up fast!</p>
+                        <progress value="1200" max="1500" style="width: 100%; height: 1rem;">80%</progress>
+                    </div>
+                </div>
+
+                <h3>Special Offers</h3>
+                <div style="background: linear-gradient(135deg, var(--success), #059669); color: var(--white); padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 1.5rem;">
+                    <h4 style="color: inherit; margin-bottom: 0.5rem;">Student Discount</h4>
+                    <p style="color: rgba(255,255,255,0.9); margin-bottom: 1rem;">50% off with valid student ID</p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.8);">Valid for undergraduate and graduate students</p>
+                </div>
+
+                <h3>Group Discounts</h3>
+                <table style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+                    <thead>
+                        <tr>
+                            <th>Group Size</th>
+                            <th>Discount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5-9 people</td>
+                            <td>20% off</td>
+                        </tr>
+                        <tr>
+                            <td>10-19 people</td>
+                            <td>25% off</td>
+                        </tr>
+                        <tr>
+                            <td>20+ people</td>
+                            <td>30% off</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Need Help?</h3>
+                <div style="background: var(--white); padding: 1rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Our registration team is here to help!</p>
+                    <p style="font-size: 0.9rem;">
+                        📧 <a href="mailto:niteshphalaswal1234@gmail.com" style="color: var(--primary-color);">niteshphalaswal1234@gmail.com</a><br>
+                        📞 <a href="tel:+918750719551" style="color: var(--primary-color);">+918750719551</a><br>
+                        💬 Live chat available 9 AM - 6 PM EST
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p>&copy; 2025 EventHub. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.8);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.8);">Terms of Service</a></p>
+            <p><small>Creating unforgettable experiences since 2020</small></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple character counter for contact form
+        document.getElementById('contactMessage').addEventListener('input', function() {
+            const charCount = this.value.length;
+            document.getElementById('charCount').textContent = charCount;
+            
+            if (charCount > 900) {
+                document.getElementById('charCount').style.color = 'var(--danger)';
+            } else {
+                document.getElementById('charCount').style.color = 'var(--text-light)';
+            }
+        });
+
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

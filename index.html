@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Premier Event Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>">
+    
+    <!-- Internal CSS for homepage specific styles -->
+    <style>
+        .stats-section {
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+        
+        .testimonials {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 2rem 0;
+        }
+        
+        .testimonial-item {
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            margin: 1rem 0;
+            background: var(--light-bg);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Semantic Header with Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">EventHub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                <li><a href="event-details.html">Event Details</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to <mark style="background: rgba(255,255,255,0.2); color: inherit; padding: 0.2rem 0.5rem; border-radius: 4px;">EventHub</mark></h1>
+            <p>Your premier destination for <em style="color: #fbbf24; font-style: normal; font-weight: 600;">exceptional events</em> and unforgettable experiences</p>
+            <a href="registration.html" class="register-btn pulse">Register Now</a>
+        </section>
+
+        <!-- Content Grid Layout -->
+        <div class="content-grid">
+            <!-- Main Content Section -->
+            <section class="main-content">
+                <!-- About Section -->
+                <article>
+                    <h2>About EventHub</h2>
+                    <p>EventHub is your trusted partner in creating and managing <strong style="color: var(--primary-color);">world-class events</strong>. From corporate conferences to cultural festivals, we bring your vision to life with precision and creativity.</p>
+                    
+                    <!-- Inline CSS examples -->
+                    <p>We specialize in <span style="background: linear-gradient(45deg, #2563eb, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">innovative event solutions</span> that leave lasting impressions.</p>
+                    
+                    <blockquote style="border-left: 4px solid var(--secondary-color); padding-left: 1rem; margin: 1.5rem 0; font-style: italic; background: rgba(249, 115, 22, 0.1); padding: 1rem; border-radius: 0 8px 8px 0;">
+                        "EventHub transformed our annual conference into an extraordinary experience that our attendees still talk about!"
+                        <cite style="display: block; margin-top: 0.5rem; font-weight: 600; color: var(--secondary-color);">- Priya Sharma, Tech Innovators Inc.</cite>
+                    </blockquote>
+                </article>
+
+                <!-- Services Section -->
+                <section>
+                    <h2>Our Services</h2>
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <h3 style="color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px;">Corporate Events</h3>
+                            <p>Professional conferences, seminars, and corporate gatherings designed to inspire and engage your audience.</p>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li style="padding: 0.25rem 0; color: var(--success);">✓ Conference Planning</li>
+                                <li style="padding: 0.25rem 0; color: var(--success);">✓ Team Building Events</li>
+                                <li style="padding: 0.25rem 0; color: var(--success);">✓ Product Launches</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="event-card">
+                            <h3>Cultural Events</h3>
+                            <p>Vibrant festivals, art exhibitions, and cultural celebrations that bring communities together.</p>
+                            <ul>
+                                <li>Music Festivals</li>
+                                <li>Art Exhibitions</li>
+                                <li>Cultural Festivals</li>
+                                <li>Community Gatherings</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="event-card">
+                            <h3>Special Occasions</h3>
+                            <p>Memorable weddings, galas, and personal celebrations crafted with attention to every detail.</p>
+                            <ol>
+                                <li>Wedding Planning</li>
+                                <li>Gala Dinners</li>
+                                <li>Birthday Celebrations</li>
+                                <li>Anniversary Events</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Statistics Section -->
+                <section class="stats-section">
+                    <h2>Our Impact in Numbers</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <p>Events Organized</p>
+                            <progress value="500" max="1000">50%</progress>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50,000+</span>
+                            <p>Happy Attendees</p>
+                            <meter value="85" min="0" max="100">85%</meter>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <p>Client Satisfaction</p>
+                            <progress value="98" max="100">98%</progress>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <p>Years Experience</p>
+                            <meter value="5" min="0" max="10">5 years</meter>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Interactive Details Section -->
+                <section>
+                    <h2>Event Planning Process</h2>
+                    <details>
+                        <summary>Initial Consultation & Planning</summary>
+                        <p>We begin with a comprehensive consultation to understand your vision, goals, and requirements. Our expert planners work closely with you to develop a detailed event strategy.</p>
+                        <ul>
+                            <li>Needs assessment and goal setting</li>
+                            <li>Budget planning and allocation</li>
+                            <li>Timeline development</li>
+                            <li>Venue selection assistance</li>
+                        </ul>
+                    </details>
+                    
+                    <details>
+                        <summary>Design & Coordination</summary>
+                        <p>Our creative team brings your vision to life with stunning designs and meticulous coordination of every element.</p>
+                        <ul>
+                            <li>Theme and design development</li>
+                            <li>Vendor coordination</li>
+                            <li>Logistics management</li>
+                            <li>Technical support planning</li>
+                        </ul>
+                    </details>
+                    
+                    <details>
+                        <summary>Execution & Support</summary>
+                        <p>On event day, our experienced team ensures flawless execution while you focus on enjoying your successful event.</p>
+                        <ul>
+                            <li>On-site event management</li>
+                            <li>Real-time problem solving</li>
+                            <li>Guest experience optimization</li>
+                            <li>Post-event analysis and feedback</li>
+                        </ul>
+                    </details>
+                </section>
+
+                <!-- Testimonials -->
+                <section class="testimonials">
+                    <h2>What Our Clients Say</h2>
+                    <div class="testimonial-item">
+                        <p>"The attention to detail was <abbr title="Absolutely Outstanding">AO</abbr>! Every aspect of our corporate retreat was perfectly executed."</p>
+                        <cite>- Arjun Gupta, <strong>Global Tech Solutions</strong></cite>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"EventHub made our wedding day absolutely magical. We couldn't have asked for a better experience!"</p>
+                        <cite>- Ananya & Vikram Singh</cite>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <h3>Quick Links</h3>
+                <nav>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="upcoming-events.html" style="display: block; padding: 0.5rem 0; color: var(--primary-color); text-decoration: none;">View All Events</a></li>
+                        <li><a href="event-details.html" style="display: block; padding: 0.5rem 0; color: var(--primary-color); text-decoration: none;">Featured Event</a></li>
+                        <li><a href="registration.html" style="display: block; padding: 0.5rem 0; color: var(--primary-color); text-decoration: none;">Register Today</a></li>
+                    </ul>
+                </nav>
+                
+                <h3>Contact Info</h3>
+                <address style="font-style: normal; line-height: 1.8;">
+                    <strong>EventHub Headquarters</strong><br>
+                    456 Event Plaza<br>
+                    Connaught Place<br>
+                    New Delhi, Delhi 110001<br>
+                    <a href="tel:+918750719551" style="color: var(--primary-color);">📞 +91 8750719551</a><br>
+                    <a href="mailto:niteshphalaswal1234@gmail.com" style="color: var(--primary-color);">✉️ niteshphalaswal1234@gmail.com</a>
+                </address>
+                
+                <h3>Follow Us</h3>
+                <div class="flex" style="gap: 1rem; margin-top: 1rem;">
+                    <a href="#" style="color: var(--primary-color); font-size: 1.5rem; text-decoration: none;" title="Facebook">📘</a>
+                    <a href="#" style="color: var(--primary-color); font-size: 1.5rem; text-decoration: none;" title="Twitter">🐦</a>
+                    <a href="#" style="color: var(--primary-color); font-size: 1.5rem; text-decoration: none;" title="Instagram">📷</a>
+                    <a href="#" style="color: var(--primary-color); font-size: 1.5rem; text-decoration: none;" title="LinkedIn">💼</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p>&copy; 2025 EventHub. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.8);">Privacy Policy</a> | <a href="#" style="color: rgba(255,255,255,0.8);">Terms of Service</a></p>
+            <p><small>Creating unforgettable experiences since 2020</small></p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
